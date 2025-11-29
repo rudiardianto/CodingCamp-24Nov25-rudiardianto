@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+    <h1 class="text-2xl font-bold text-center mb-4">To-Do List</h1>
+
+    <!-- Input tugas baru -->
+    <div class="flex mb-4">
+      <input type="text" id="taskInput" placeholder="Tambahkan tugas baru..." class="flex-1 p-2 border border-gray-300 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <button id="addTaskBtn" class="bg-blue-500 text-white px-4 rounded-r hover:bg-blue-600">Tambah</button>
+    </div>
+
+    <!-- Filter tugas -->
+    <div class="flex justify-center space-x-2 mb-4">
+      <button class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300" data-filter="all">Semua</button>
+      <button class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300" data-filter="completed">Selesai</button>
+      <button class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300" data-filter="pending">Belum Selesai</button>
+    </div>
+
+    <!-- Daftar tugas -->
+    <ul id="taskList" class="space-y-2">
+      <!-- Tugas akan muncul di sini -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
